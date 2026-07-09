@@ -25,19 +25,20 @@ const pageC2 = contextC.newPage();
 });
 
 
-test.only('TC-02', async({page})=>{
+test('TC-02', async({page})=>{
 
     await page.goto('https://accounts.saucelabs.com/am/XUI/#login/');
 
     await page.getByRole('textbox',{name: 'User Name'}).fill('Test@123');
     await page.getByRole('textbox',{name: 'Password'}).fill('Test@123');
-    await page.getByRole('checkbox',{name: 'Remember usernae'}).click();
-
+    await page.getByRole('checkbox',{name: 'Remember username'});
    await expect(page.getByText('Sign in',{exact: true})).toHaveText('Sign in');
    const TV = await page.getByText('Sign in',{exact: true}).textContent();
    console.log(TV === 'Sign in' ? 'Validation Passed:Sign' : `Validation Failed, got: ${TV}`);
-
-   
-
-    
 });
+
+test('TC-03', async({page})=>{
+
+
+ await page.goto('https://www.google.com/');
+})
