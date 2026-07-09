@@ -42,3 +42,9 @@ test('TC-03', async({page})=>{
 
  await page.goto('https://www.google.com/');
 })
+
+test('TC-04', async({page})=>{
+
+
+ await page.goto('https://www.google.com/');
+})
