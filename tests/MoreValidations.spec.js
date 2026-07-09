@@ -45,3 +45,8 @@ test('visual', async({page})=>
     await page.goto("https:/www.google.com/");
 expect(await page.screenshot()).toMatchSnapshot('landing.png');
 }) ;
+
+test('Launch Google Page', async({page})=>{
+await page.goto("https://www.google.com")
+
+});
