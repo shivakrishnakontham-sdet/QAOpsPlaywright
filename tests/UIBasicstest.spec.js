@@ -56,7 +56,7 @@ test('@web UI Controls', async ({page})=>
     console.log(await page.locator(".radiotextsty").last().isChecked());  ////Verify Radio button checked or not
     await expect(page.locator(".radiotextsty").last()).toBeChecked();    //  //assertion
   
-    await page.locator("#terms").click()
+    await page.getByLabel('I Agree to the terms and conditions').click()
     await expect(page.locator("#terms")).toBeChecked();  //Assertion for checking is it checked or not
     await page.locator("#terms").uncheck();
     expect (await page.locator("#terms").isChecked()).toBeFalsy();
@@ -84,7 +84,7 @@ test('Child window handle', async ({browser})=>
     const domain = attayText[1].split(" ")[0];
     //console.log(domain);
     await page.locator("#username").type(domain);
-    await page.pause();
+    //await page.pause();
     console.log(await page.locator("#username").inputValue());
 
 

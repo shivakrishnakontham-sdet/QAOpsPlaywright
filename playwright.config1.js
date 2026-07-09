@@ -8,8 +8,8 @@ import { workers } from 'node:cluster';
  */
 const config = ({
   testDir: './tests',
-  //retries: 1,  //Retry Mechanisam 
-  //workers: 1, //Disable Parellel Mechanisam and set to 1 worker
+  //retries: 2,  //Retry Mechanisam 
+  //workers: 4, //Disable Parellel Mechanisam and set to 1 worker
   /* Maximum time one test can run for  */
   //
   timeout: 30 * 1000,
@@ -24,7 +24,7 @@ const config = ({
       use: {
         browserName: 'webkit',
         headless: false,
-        screenshot: 'oonly-on-failure',   // Off/On/only-on-failure
+        screenshot: 'only-on-failure',   // Off/On/only-on-failure
         trace: 'retain-on-failure',  // Off/On/Retain-on-failure 
         //...devices['iPhone 11 Pro']   
       }
@@ -41,7 +41,7 @@ const config = ({
         ignoreHttpsErrors: true,  //Ignonre the ssl Issue for website (Your connection is bit private - Advanced)
         Permissions: 'Geolocation',  //Allow the location in browser left top corner of the browser
         trace: 'on'
-        //...devices['Galaxy S24'],  //we can check mobile responcive
+        //...devices['Galaxy S24'],  //we can check mobile responsive
         //Viewport : {width:720, height:720}  // We can check the web responsive
       }
     }

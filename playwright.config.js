@@ -7,8 +7,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const config =({
   testDir: './tests',
-  retries: 1,  //Retry Mechanisam 
-  workers: 3, //Disable Parellel Mechanisam and set to 1 worker
+  //retries: 1,  //Retry Mechanisam 
+  //workers: 2, //Disable Parellel Mechanisam and set to 1 worker
   timeout: 30 * 1000,
   expect: {
     timeout: 5000
