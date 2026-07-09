@@ -10,3 +10,8 @@ test("Open the Application", async () => {
     await browser.close();
 });
 
+test('TC-05', async({page})=>{
+
+
+ await page.goto('https://www.google.com/');
+});
