@@ -1,4 +1,5 @@
-const { test, expect } = require('@playwright/test')
+const { test, expect } = require('@playwright/test');
+const { time } = require('node:console');
 
 test.describe.configure({mode: 'serial'});   // Run the 3 tests parallelly/serial
 test("@web popup validations", async ({ page }) => {
@@ -41,7 +42,6 @@ test("Screenshot and Visual Comparision", async ({ page }) => {
 //screenshot -> store -> screenshot--> 
 test('visual', async({page})=>
 {
-    await page.goto("https://www.google.com/");
-    expect(await page.screenshot()).toMatchSnapshot('landing.png');
-
-})
+    await page.goto("https:/www.google.com/");
+expect(await page.screenshot()).toMatchSnapshot('landing.png');
+}) ;

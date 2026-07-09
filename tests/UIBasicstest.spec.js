@@ -13,8 +13,8 @@ const { request } = require('node:http');
     const signIn =page.locator("#signInBtn");
     const cardTitles=page.locator(".card-body a");
 
-    page.on('request', request=> console.log(request.url()));  //All N/w rquest calls are printed
-    page.on('response', response=> console.log(response.url(), response.status())); //All N/w response calls and responce codes are printed
+    //page.on('request', request=> console.log(request.url()));  //All N/w rquest calls are printed
+    //page.on('response', response=> console.log(response.url(), response.status())); //All N/w response calls and responce codes are printed
 
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
     console.log(await page.title());
