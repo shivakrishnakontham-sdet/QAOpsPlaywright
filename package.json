@@ -11,6 +11,7 @@
     "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari"
   },
   "keywords": [],
+  
   "author": "",
   "license": "ISC",
   "type": "commonjs",

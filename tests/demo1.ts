@@ -29,9 +29,11 @@ console.log(user.location = "Hyderabad");
 class CartPage
 {
     page: Page;
-    cartProducts:Locator;
-    productsText:Locator;
-    cart:Locator;
+    cartProducts: Locator;
+    productsText: Locator;
+    cart: Locator;
+    orders: Locator;
+    checkout: Locator;
 
    
 constructor(page:any)
@@ -43,4 +45,5 @@ constructor(page:any)
     this.orders = page.locator("button[routerlink*='myorders']");
     this.checkout = page.locator("text=Checkout");
 
+}
 }

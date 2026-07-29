@@ -4,7 +4,7 @@ import { workers } from 'node:cluster';
 
 
 /**
- * @see https://playwright.dev/docs/test-configuration
+ * @see https://chatgpt.com/share/6a521e2b-cab4-83ee-835b-e1619cd0d33e
  */
 const config = ({
   testDir: './tests',
