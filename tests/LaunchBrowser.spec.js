@@ -5,4 +5,5 @@ test("Open the Application", async () => {
     const page = await context.newPage();
     await page.goto("http://www.google.com");
     await browser.close();
+    console.log('Browser is launched')
 });
