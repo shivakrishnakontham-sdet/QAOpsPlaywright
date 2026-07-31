@@ -5,7 +5,7 @@ constructor(page)
     this.page = page;
     this.products = page.locator(".card-body");
     this.productsText = page.locator(".card-body b");
-    this.cart =  page.locator("[routerlink*='cart']");
+    this.cart =  page.locator("button[routerlink*='cart']");
     this.orders = page.locator("button[routerlink*='myorders']");
 
 }
@@ -35,6 +35,7 @@ async navigateToOrders()
 
 async navigateToCart()
 {
+    await this.cart.waitFor({ state: 'visible', timeout: 15000 });
     await this.cart.click();
 }
 

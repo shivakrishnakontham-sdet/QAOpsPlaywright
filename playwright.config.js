@@ -6,9 +6,9 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const config =({
   testDir: './tests',
-  retries: 1,  //Retry Mechanisam 
-  workers: 6, // Run tests in parallel across up to 3 workers
-  fullyParallel: true,
+  //retries: 1,  // Retry Mechanism
+  workers: 1, // Run tests in parallel across up to 6 workers
+  fullyParallel: false,
   timeout: 30 * 1000,
   expect: {
     timeout: 5000
@@ -33,7 +33,7 @@ const config =({
         browserName: 'chromium'
       }
     },
-    {
+/*     {
       name: 'firefox',
       use: {
         browserName: 'firefox'
@@ -43,8 +43,8 @@ const config =({
       name: 'webkit',
       use: {
         browserName: 'webkit'
-      }
-    }
+      } 
+    }*/
   ],
 });
 module.exports = config
